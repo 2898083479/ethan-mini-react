@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import NumberComp from "./Number";
+import { createRoot } from "react-dom/client";
 
 const arr = [];
 for (let i = 0; i < 1000; i++) {
@@ -25,16 +26,18 @@ class Home extends React.Component {
           }}
           className="animation"
         >{`count：${this.state.count}`}</div>
-        {arr.map((i) => (
+        {/* {arr.map((i) => (
           <NumberComp
             parentCount={this.state.count}
             key={"" + this.state.count + i}
             count={i}
           />
-        ))}
+        ))} */}
       </>
     );
   }
 }
 
-ReactDOM.unstable_createRoot(document.getElementById("root")).render(<Home />);
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<Home />);

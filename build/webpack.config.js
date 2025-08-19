@@ -13,7 +13,7 @@ module.exports = {
     chunkFilename: "[name].chunk.js"
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@shared': path.resolve(__dirname, '../shared'),
       '@react': path.resolve(__dirname, '../react'),
